@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.flutterrocks.flutter_flavors"
+    namespace = "com.example.flutter_flavors_test"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.flutterrocks.flutter_flavors"
+        applicationId = "com.example.flutter_flavors_test"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -36,23 +36,26 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
         }
-        flavorDimensions "default"
-        productFlavors {
-            production {
-                    dimension "default"
-                    resValue "string", "app_name", "Flavors Example"
-                    applicationIdSuffix ""                
-            }
-            staging {
-                    dimension "default"
-                    resValue "string", "app_name", "Stg Flavors Example"
-                    applicationIdSuffix ".stg"                
-            }
-            development {
-                    dimension "default"
-                    resValue "string", "app_name", "Dev Flavors Example"
-                    applicationIdSuffix ".dev"                
-            }
+    }
+    flavorDimensions "app"
+    productFlavors {
+        dev {
+            dimension "app"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            resValue "string", "app_name", "Flavors Dev"
+        }
+        beta {
+            dimension "app"
+            applicationIdSuffix ".beta"
+            versionNameSuffix "-beta"
+            resValue "string", "app_name", "Flavors beta"
+
+        }
+        production {
+            dimension "app"
+            resValue "string", "app_name", "Flavors"
+            // No suffix for production
         }
     }
 }
