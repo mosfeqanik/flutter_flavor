@@ -14,15 +14,15 @@
             ]
         },
         {
-            "name": "Launch staging",
+            "name": "Launch beta",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main_staging.dart",
+            "program": "lib/main_beta.dart",
             "args": [
                 "--flavor",
-                "staging",
+                "beta",
                 "--target",
-                "lib/main_staging.dart"
+                "lib/main_beta.dart"
             ]
         },
         {
