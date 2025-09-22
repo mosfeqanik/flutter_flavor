@@ -38,20 +38,18 @@ This repository demonstrates how to set up multiple app flavors in Flutter with 
 ### 1️⃣ Clone the repository
 
 ```
-let message = 'Hello world';
-alert(message);
+git clone https://github.com/mosfeqanik/flutter_flavor
+cd flutter_flavor
 ```
 ### 2️⃣ Install dependencies
 
 ```
-let message = 'Hello world';
-alert(message);
+flutter pub get
 ```
 ### 3️⃣ Generate launcher icons
 
 ```
-let message = 'Hello world';
-alert(message);
+dart run flutter_launcher_icons:main -f flutter_launcher_icons*
 ```
 
 ### 4️⃣ Configure Firebase for each flavor
