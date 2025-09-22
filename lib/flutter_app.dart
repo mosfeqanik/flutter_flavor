@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'flavors/flavor_config.dart';
 class MyApp extends StatelessWidget {
@@ -26,7 +27,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.instance;
 
+
+@override
+  void initState() {
+        firebaseAnalytics
+        .setAnalyticsCollectionEnabled(true);
+        firebaseAnalytics.logScreenView(
+            screenName: "MyApppppp");
+    super.initState();
+  }
   void _incrementCounter() {
     setState(() {
       _counter++;

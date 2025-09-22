@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "729801880556",
+    "project_id": "flutter-flavor-productio-7710a",
+    "storage_bucket": "flutter-flavor-productio-7710a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729801880556:android:c6c469dd98e520a3c806c9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_flavors_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZBmaqNIfPVndqP1Uu5jrgV0Q6uYrOPAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
