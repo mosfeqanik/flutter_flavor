@@ -82,6 +82,55 @@ productFlavors {
     }
 }
 ```
+### For Android Studio add Flavors Configuration
+![This is a preview image of configure flavor in android_studio by Md Mosfeq Anik.](/assets/configure_flavor_in_android_studio.png "This is a preview image of configure flavor in android_studio by Md Mosfeq Anik.")
+
+## For Vscode add Flavors Configuration
+create `.vscode/launch.json`
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch development",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_development.dart",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart"
+      ]
+    },
+    {
+      "name": "Launch beta",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_beta.dart",
+      "args": [
+        "--flavor",
+        "beta",
+        "--target",
+        "lib/main_beta.dart"
+      ]
+    },
+    {
+      "name": "Launch production",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_production.dart",
+      "args": [
+        "--flavor",
+        "production",
+        "--target",
+        "lib/main_production.dart"
+      ]
+    }
+  ]
+}
+```
 
 ## 🔹 iOS: Xcode Schemes
 * Add separate schemes for each flavor:
@@ -169,7 +218,6 @@ Thanks to
 * [Andrea Bizzotto(How to Setup Flutter & Firebase with Multiple Flavors using the FlutterFire CLI)](https://codewithandrea.com/articles/flutter-firebase-multiple-flavors-flutterfire-cli/)
 * [Marcus Ng(Flutter Flavors, App Icons, and Firebase Tutorial)](https://www.youtube.com/watch?v=Vhm1Cv2uPko)
 * [DevVibe(Flutter Flavors Explained — Dev, Staging, Prod Setup in Flutter (Android & iOS))](https://www.youtube.com/watch?v=EyQfuKvVUGY)
-## Images
 
 ![This is a preview image of flavor structure by Md Mosfeq Anik.](/assets/detailed_screenshot.png "This is a preview image of flavor structure by Md Mosfeq Anik.")
 
